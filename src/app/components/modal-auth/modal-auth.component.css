@@ -64,6 +64,13 @@
     background: var(--chakra-colors-500);
     color: #fff;
     border: 2px var(--chakra-colors-500);
+    cursor: pointer;
+    transition: all .2s;
+  }
+
+  .btnTryAgain:hover{
+    background: var(--chakra-colors-blue-600);
+    border-color: var(--chakra-colors-blue-600);
   }
   
   button {

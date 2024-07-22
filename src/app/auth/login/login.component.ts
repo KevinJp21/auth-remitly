@@ -52,7 +52,7 @@ export default class LoginComponent implements OnInit {
     setTimeout(() => {
       this.loading = false;
       this.showModal = true; // Mostrar el modal después de la carga
-    }, 2000); //tiempo de carga
+    }, 1000); //tiempo de carga
   }
 }
 
