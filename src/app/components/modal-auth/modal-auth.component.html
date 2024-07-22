@@ -1,0 +1,15 @@
+<div class="modal-overlay" *ngIf="isVisible">
+  <section class="modalContainer">
+    <header class="modalHeader">
+        No podemos encontrar tu perfil
+    </header>
+    <div class="modalContent">
+        <p>El email o la contraseña son incorrectos.</p>
+    </div>
+
+    <footer class="footerModal">
+        <button (click)="close()" type="button" class="btnTryAgain">Inténtalo de nuevo.</button>
+    </footer>
+    
+  </section>
+</div>

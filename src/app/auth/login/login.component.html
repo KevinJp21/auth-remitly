@@ -1,1 +1,85 @@
-<p>login works!</p>
+<main>
+  <app-loading-spinner *ngIf="loading"></app-loading-spinner>
+
+  <!-- Mostrar el modal si showModal es true -->
+  <app-modal-auth [isVisible]="showModal"></app-modal-auth>
+
+  <header
+    [ngClass]="{
+      LoginLogo: !smallLogoVisible,
+      'LoginLogo--small': smallLogoVisible
+    }"
+  >
+    <img [src]="logoSrc" alt="" width="170px" height="40px" />
+  </header>
+
+  <section class="containerFormLogin">
+    <div class="wrapperForm">
+      <div class="formContent">
+        <h2>Hola de nuevo</h2>
+        <form action="" id="login" (submit)="handleLogin($event)">
+          <div class="form">
+            <div class="formEmail">
+              <label for="email" class="formLabel">Dirección de email</label>
+              <input
+                type="email"
+                placeholder="abc@example.com"
+                class="formInput"
+                required
+              />
+            </div>
+
+            <div class="formPass">
+              <label for="password" class="formLabel">Contraseña</label>
+              <div class="contentPassInput">
+                <input
+                  [type]="passwordVisible ? 'text' : 'password'"
+                  class="formInput"
+                  required
+                />
+                <div class="eyeBTNWrapper">
+                  <button (click)="togglePasswordVisibility($event)">
+                    <img
+                      [src]="
+                        passwordVisible
+                          ? 'assets/eye-crossed.svg'
+                          : 'assets/eye.svg'
+                      "
+                      alt="boton ver contraseña"
+                      width="24px"
+                      height="24px"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="forgotPassContainer">
+              <button>Olvidé mi contraseña</button>
+            </div>
+
+            <button class="BTNLogin">Iniciar sesión</button>
+          </div>
+        </form>
+        <button class="LoginOptions">Mas opciones para iniciar sesión</button>
+        <div class="singUp">
+          <p>¿Necesitas un perfil? <span>Registrarse</span></p>
+        </div>
+        <p class="footerLogin">
+          Al usar Remitly, aceptas el
+          <a target="_blank" rel="noopener" class="linksFooterLogin" href=""
+            >Firmar de forma electrónica el Aviso de divulgación y
+            consentimiento</a
+          >, la
+          <a target="_blank" rel="noopener" class="linksFooterLogin" href=""
+            >Política de privacidad</a
+          >
+          y el
+          <a target="_blank" rel="noopener" class="linksFooterLogin" href=""
+            >Acuerdo de usuario</a
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>

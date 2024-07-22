@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+
+    --chakra-colors-gray-800: #19293a;
+    --chakra-colors-blue-600: #22578e;
+    --chakra-colors-blue-700: #21386c;
+    --chakra-colors-blue-800: #212e61;
+    --chakra-colors-500: #226ba4;
+
+}
